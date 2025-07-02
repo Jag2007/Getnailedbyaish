@@ -3,22 +3,27 @@ import logo from "/images/Subject.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-pink-600 py-20 shadow-inner" id="contact">
+    <footer
+      className="py-20 shadow-inner"
+      id="contact"
+      style={{ backgroundColor: "#fff", color: "#c3547d" }}
+    >
       <div className="max-w-7xl mx-auto px-1 md:flex md:justify-between md:items-start space-y-4 md:space-y-0">
-        {/* LEFT: Logo + Brand */}
         <div className="flex flex-col items-center md:items-start">
           <img
             src={logo}
             alt="Logo"
-            className="h-12 w-12 rounded-full border-2 border-pink-200 shadow mb-2"
+            className="h-12 w-12 rounded-full border-2"
+            style={{ borderColor: "#e7b2c6", boxShadow: "0 0 5px #e28dac" }}
           />
-          <h1 className="text-lg font-bold tracking-wide">get.nailedbyaish</h1>
+          <h1 className="text-lg font-bold tracking-wide text-[#e10053]">
+            get.nailedbyaish
+          </h1>
         </div>
 
-        {/* RIGHT: Contact Info */}
         <div className="flex flex-col items-center md:items-end space-y-2">
           <div className="flex items-center gap-2">
-            <Instagram className="w-5 h-5 text-pink-500" />
+            <Instagram className="w-5 h-5" style={{ color: "#c3547d" }} />
             <a
               href="https://www.instagram.com/get.nailedbyaish/"
               target="_blank"
@@ -30,7 +35,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-2">
-            <Phone className="w-5 h-5 text-pink-500" />
+            <Phone className="w-5 h-5" style={{ color: "#c3547d" }} />
             <a
               href="https://wa.me/6283449420"
               target="_blank"
@@ -41,7 +46,10 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-sm text-pink-500 text-center md:text-right">
+          <p
+            className="text-sm text-center md:text-right"
+            style={{ color: "#c3547d" }}
+          >
             Professional Nail Art Services ✨ Book your custom set today!
           </p>
         </div>

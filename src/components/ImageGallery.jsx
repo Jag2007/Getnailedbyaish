@@ -4,7 +4,12 @@ export default function ImageGallery({ placeholderCount = 6 }) {
       {Array.from({ length: placeholderCount }).map((_, i) => (
         <div
           key={i}
-          className="w-full h-40 bg-white border border-dashed border-pink-300 rounded-xl flex items-center justify-center text-pink-400 text-sm"
+          className="w-full h-40 rounded-xl flex items-center justify-center text-sm"
+          style={{
+            backgroundColor: "#e7b2c6",
+            border: "2px dashed #fff",
+            color: "#e28dac",
+          }}
         >
           Image {i + 1}
         </div>
