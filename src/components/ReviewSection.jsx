@@ -36,7 +36,13 @@ const reviews = [
 
 export default function ReviewSection() {
   const [start, setStart] = useState(0);
-  const visibleCount = 4;
+  const getVisibleCount = () => {
+    if (window.innerWidth < 640) return 1;
+    if (window.innerWidth < 900) return 2;
+    if (window.innerWidth < 1200) return 3;
+    return 4;
+  };
+  const [visibleCount, setVisibleCount] = useState(getVisibleCount());
   const intervalRef = useRef();
 
   // Helper to move carousel
@@ -59,6 +65,12 @@ export default function ReviewSection() {
     resetInterval();
     return () => clearInterval(intervalRef.current);
   }, [start]);
+
+  useEffect(() => {
+    const handleResize = () => setVisibleCount(getVisibleCount());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Handle wrap-around for the carousel
   const visibleReviews =
@@ -89,7 +101,7 @@ export default function ReviewSection() {
           <ChevronLeft className="w-6 h-6" />
         </button>
         {/* Reviews */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center items-stretch transition-all duration-500">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center items-stretch transition-all duration-500 min-h-[320px] w-full max-w-6xl">
           {visibleReviews.map((review, idx) => (
             <div
               key={idx}
