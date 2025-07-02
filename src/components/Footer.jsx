@@ -1,5 +1,5 @@
 import { Instagram, Phone } from "lucide-react";
-import logo from "../images/Subject.png";
+import logo from "/images/Subject.png";
 
 export default function Footer() {
   return (
