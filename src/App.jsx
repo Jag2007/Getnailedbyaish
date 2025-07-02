@@ -2,7 +2,8 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import CategorySection from "./components/CategorySection";
 import Footer from "./components/Footer";
-import Bow from "../images/background.png";
+import ReviewSection from "./components/ReviewSection";
+import Bow from "../images/background.jpeg";
 export default function App() {
   return (
     <div className="bg-white text-[#e28dac]">
@@ -17,6 +18,7 @@ export default function App() {
         }}
       >
         <CategorySection />
+        <ReviewSection />
         <Footer />
       </div>
     </div>

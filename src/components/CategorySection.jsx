@@ -6,8 +6,8 @@ export default function CategorySection() {
       {["Solid Hues", "Best in the Market", "Customer Favourites"].map(
         (label, index) => (
           <div key={index}>
-            <h2 className="text-2xl font-semibold mb-4 text-[#e10053]">
-              <span className="bg-white px-3 py-1 rounded-xl shadow-sm inline-block">
+            <h2 className="text-2xl font-semibold mb-4">
+              <span className="bg-[#e10053] text-[#f8d4e6] px-3 py-1 rounded-xl shadow-sm inline-block">
                 💅 {label}
               </span>
             </h2>
